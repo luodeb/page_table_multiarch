@@ -7,9 +7,7 @@ use std::{
 
 use memory_addr::{PhysAddr, VirtAddr};
 use page_table_entry::{GenericPTE, MappingFlags};
-use page_table_multiarch::{
-    PageSize, PageTable64, PagingHandler, PagingMetaData, PagingResult,
-};
+use page_table_multiarch::{PageSize, PageTable64, PagingHandler, PagingMetaData, PagingResult};
 use rand::{Rng, SeedableRng, rngs::SmallRng};
 
 const PAGE_LAYOUT: Layout = unsafe { Layout::from_size_align_unchecked(4096, 4096) };
